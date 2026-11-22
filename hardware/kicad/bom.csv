@@ -1,0 +1,19 @@
+Reference,Description,Qty,Package,Manufacturer / example part
+U1,"STM32G474RET6 (example MCU: HRTIM + TIM1/TIM8 for >=16 PWM outputs, 5 ADCs)",1,LQFP-64,STMicroelectronics
+U2,"3.3 V low-dropout regulator, >=150 mA",1,SOT-23-5,e.g. TI TLV75533
+U3,"Step-down converter for H-bridge rail VDRV (3.3 V, >=600 mA)",1,SOT-563,e.g. TI TPS62A01
+C1,10 uF X7R decoupling on VBAT,1,0603,generic
+C2,10 uF X7R decoupling on +3V3,1,0603,generic
+C3,10 uF X7R decoupling on VDRV,1,0603,generic
+C4,10 uF X7R decoupling on VDRV,1,0603,generic
+C5,10 uF X7R decoupling on +3V3,1,0603,generic
+R1-R3,"10 kOhm 1% (VREF divider, DRV_EN pull-down)",3,0402,generic
+U4-U11,DRV8837 H-bridge (one per coil channel),8,WSON-8 2x2,Texas Instruments
+Cres1-8,"Series-resonant capacitor, C0G/NP0, 50 V, values 636/458/345/270/217/178/148/126 nF (trim per coil)",8,1206,e.g. Murata GRM C0G
+Rs1-8,0.5 Ohm 1% current-sense resistor,8,0805,generic
+U12-U19,"Bidirectional current-sense amplifier, PWM-rejecting (INA240-class)",8,TSSOP-8,Texas Instruments
+C 100n x8,100 nF X7R bulk at each H-bridge VM pin,8,0402,generic
+Jcoil1-8,2-pin lead connector to patch coil (twisted pair harness),8,JST SH 1.0 mm,JST
+PATCH,"4-layer polyimide flex patch, 8 x 65-turn planar coils (hardware/kicad/patch)",1,260 x 150 mm,flex PCB fab
+BAT,"3.7 V Li-Po pouch cell, >=1500 mAh (12 h at nominal 80 mA drive)",1,,generic
+RX,"Capsule receiver: 3-axis ferrite-cored coil, 400 turns, 2.5 mm winding diameter (concept)",1,,custom

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "CapsuleTrack")(type "KiCad")(uri "${KIPRJMOD}/CapsuleTrack.pretty")(options "")(descr "CapsuleTrack-EM footprints"))
+)

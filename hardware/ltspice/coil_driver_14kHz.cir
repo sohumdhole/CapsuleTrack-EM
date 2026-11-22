@@ -1,0 +1,18 @@
+* CapsuleTrack-EM patch coil driver - one channel, f = 14 kHz
+* Phase-shifted full bridge (3-level output), series-resonant coil, current sense.
+.param F=14000 VRAIL=3.3 PHI=31.05 L=0.000203123 RCOIL=13.2797 C=6.36246e-07
+.param RON=0.28 RSENSE=0.5
+VA a 0 PULSE(0 {VRAIL} 0 20n 20n {0.5/F-20n} {1/F})
+VB b 0 PULSE(0 {VRAIL} {PHI/360/F} 20n 20n {0.5/F-20n} {1/F})
+RONA a n1 {RON/2}
+C1 n1 n2 {C}
+L1 n2 n3 {L}
+RCOIL n3 n4 {RCOIL}
+VIM n4 n5 0
+RSENSE n5 nb {RSENSE}
+RONB nb b {RON/2}
+.tran 0.05u 0.00428571 0.00285714 0.05u
+.meas tran Ipk MAX i(VIM) FROM=0.00285714 TO=0.00428571
+.meas tran Irms RMS i(VIM) FROM=0.00285714 TO=0.00428571
+.four {F} i(VIM)
+.end

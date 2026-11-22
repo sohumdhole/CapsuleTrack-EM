@@ -1,0 +1,2 @@
+r_out_mm,r_in_mm,turns,layers,length_m,R_dc_ohm,L_uH,moment_Am2_per_A,cu_skin_depth_um_at_31.5kHz,cu_thickness_um,drive_current_pk_A,moment_pk_Am2
+20.0,12.6875,64.875,4,6.755680842279492,13.279738341395117,203.12316346281747,0.056887205788967124,371.9024832339416,35.0,0.08,0.00455097646311737
